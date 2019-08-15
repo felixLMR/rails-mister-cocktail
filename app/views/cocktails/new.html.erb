@@ -1,0 +1,18 @@
+<div class="container col-6 mt-5">
+<h1>New Cocktail</h1>
+<%= simple_form_for(@cocktail) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :ingredients %>
+
+
+  </div>
+
+  <div class="form-actions btn btn-primary" style=>
+    <%= f.button :submit %>
+  </div>
+  <% end %>
+</div>
